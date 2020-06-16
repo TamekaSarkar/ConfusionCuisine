@@ -3,16 +3,29 @@ $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
 
-// Height variables
+
 $carousel-item-height: 300px;
 
-@mixin zero-margin($pad-up-dn,$pad-left-right) {
-    margin:0px auto;
-    padding: $pad-up-dn,$pad-left-right;
+@mixin zero-margin($pad-up-dn, $pad-left-right) {
+	margin:0px auto;
+	padding: $pad-up-dn $pad-left-right;
+}
+
+.modal-header {
+    background: $background-dark;
+    color: floralwhite;
+
+    .close {
+        color:floralwhite
+    }
     
 }
 
-.row-header{
+.modal-body {
+    background: $background-pale
+}
+
+.row-header {
     @include zero-margin(0px,0px);
 }
 
@@ -54,7 +67,6 @@ body{
     border-bottom: 1px solid $lt-gray;
     padding: 10px;
 }
-/* nesting selectors */
 
 .carousel {
     background:$background-dark;
